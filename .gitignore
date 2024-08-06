@@ -1,25 +1,63 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
 # Test binary, built with `go test -c`
 *.test
 
-# Output of the go coverage tool, specifically when used with LiteIDE
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.exe~
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.coverprofile
+coverage.out
+coverage_report.log
+
+# If you prefer the repo root, this can be moved up to the global ignore file:
+# $ git config --global core.excludesfile '~/.gitignore_global'
+.DS_Store
 
 # Go workspace file
 go.work
 go.work.sum
 
-# env file
+# Dependency directories
+.gopath/
+
+# Build directories
+bin/
+build/
+dist/
+
+# Log files
+*.log
+*.txt
+*.out
+
+# IDE directories
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+Thumbs.db
+*.DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Environment variables
 .env
+
+# terraform
+test_terraform
+*.tfstate
+*.tfstate.*
+
+# binary
+terraform-provider-dnsmasqapi
+
+# build
+dist
